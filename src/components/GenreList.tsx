@@ -1,11 +1,12 @@
 import React from 'react'
-import useGenres from '../hooks/useGenres';
+import useGenres, { Genre } from '../hooks/useGenres';
 import {SimpleGrid, Text} from '@chakra-ui/react'
 import GameCardContainer from './GameCardContainer';
 import GameCardSkeleton from './GameCardSkeleton';
+import useData from '../hooks/useData';
 
 const GenreList = () => {
-    const {genres, error, isLoading, setError, setGenres} = useGenres();
+    const {data, error, isLoading, setError, setData} = useGenres();
     const skeletons = [1,2,3,4,5,6]
 
   return (
@@ -13,7 +14,7 @@ const GenreList = () => {
         {error && <Text className="text-danger">{error}</Text>}
     
         <ul>
-            {genres.map((genre) => <li key={genre.id}>{genre.name}</li>)}
+            {data.map((genre) => <li key={genre.id}>{genre.name}</li>)}
         </ul>
     </>
   )
