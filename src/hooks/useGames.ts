@@ -1,11 +1,19 @@
 import {useEffect, useState} from 'react';
 import apiClient, {CanceledError} from '../services/api-client';
 
+export interface Platform{
+    id:number;
+    name: string;
+    slug: string;
+}
 export interface Game{
     id:number;
     name:string;
     background_image:string;
     rating:number;
+    parent_platforms:{
+        map(arg0: (p: { platform: any; }) => any): Platform[];platform: Platform
+};
 };
 
 interface FetchGamesResponse{

@@ -5,8 +5,6 @@ import apiClient from '../services/api-client';
 import useGames from '../hooks/useGames';
 import GameCard from './GameCard';
 
-
-
 const GameGrid = () => {
 
     const {games, error, isLoading, setError, setGames} = useGames();
