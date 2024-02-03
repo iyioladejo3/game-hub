@@ -13,7 +13,8 @@ export interface Game{
     rating:number;
     parent_platforms:{
         map(arg0: (p: { platform: any; }) => any): Platform[];platform: Platform
-};
+    };
+    metacritic:number;
 };
 
 interface FetchGamesResponse{
