@@ -4,6 +4,7 @@ import ColorModeSwitch from './components/ColorModeSwitch'
 import GameGrid from './components/GameGrid'
 import GameCard from './components/GameCard'
 import useGames from './hooks/useGames'
+import GenreList from './components/GenreList'
 function App() {
   return <Grid
   templateAreas={{
@@ -16,7 +17,7 @@ function App() {
   </GridItem>
   <Show above='lg'>
     <GridItem area={'aside'}>
-      Aside
+      <GenreList />
     </GridItem>
   </Show>
   <GridItem area={'main'}>
