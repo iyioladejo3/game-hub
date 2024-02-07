@@ -11,6 +11,6 @@ export interface Genre{
 
 
 //hook to share functionalityx across board
-const useGenres = () => useData<Genre>('/genres')
+const useGenres = (selectedGenre: Genre | null) => useData<Genre>('/genres')
 
 export default useGenres;
