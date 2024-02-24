@@ -10,6 +10,7 @@ const SortSelector = () => {
         <Menu>
             <MenuButton as={Button} rightIcon={<BsChevronDown />}>
                 Order by: Relevance
+
             </MenuButton>
             <MenuList>
                 <MenuItem>Relevance</MenuItem>
@@ -19,6 +20,7 @@ const SortSelector = () => {
                 <MenuItem>Popularity</MenuItem>
                 <MenuItem>Average rating</MenuItem>
             </MenuList>
+            
         </Menu>
     </div>
   )
