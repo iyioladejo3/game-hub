@@ -13,7 +13,7 @@ interface Props{
 
 const GenreList = ({selectedGenre, onSelectGenre}:Props) => {
     //usePlatforms();
-    const {data, error, isLoading, setError, setData} = useGenres();
+    const {data, error, isLoading} = useGenres();
 
   return (
     <>
